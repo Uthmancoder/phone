@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .phone {
+        position: relative;
+        height: 550px;
+        background-image: url(https://images.pexels.com/photos/2486168/pexels-photo-2486168.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .camera {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: black;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    .inner {
+        background-color: grey;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    .cam {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .camer {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .dark {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 10px;
+        left: 44%;
+    }
+
+    .apps {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .app-div {
+        display: grid;
+        width: fit-content;
+
+    }
+
+    .big-div {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .big-div button {
+        width: 50px;
+    }
+
+    .icons {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .marg {
+        margin-left: 67%;
+    }
+
+    .menu {
+        width: 100%;
+        height: 480px;
+        overflow-y: scroll;
+        margin-left: 10px;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .back {
+        border: none;
+        background-color: rgba(225, 225, 225, 0.5);
+        color: black;
+        margin: 0 0 15px 0;
+    }
+
+    .inp-div {
+        height: 25px;
+        position: relative;
+        padding: 2px 10px;
+        background-color: rgba(225, 225, 225, 0.5);
+        margin-left: 7%;
+        border: none;
+    }
+
+    input {
+        position: absolute;
+        height: 20px;
+        top: 2px;
+        border: none;
+        background: none;
+        outline: none;
+    }
+
+    .search {
+        font-size: 20px;
+    }
+
+    .mic {
+        font-size: 20px;
+        position: absolute;
+        right: 10px;
+    }
+    .more{
+        width: 30px;
+        height: 30px;
+        padding: 4px 2px;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        margin-left: 20px;
+        background: none;
+    }
+    .vert{
+        font-size: 20px;
+    }
+    .more:hover{
+            background-color: rgba(225, 225, 225, 0.5);
+    }
+    .more-div{
+        position: relative;
+    }
+    .more-drop{
+        width: 170px;
+        height: 130px;
+        border-radius: 10px;
+        background-color: rgb(85, 85, 85);
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        color: white;
+    }
+    .more-div:focus-within .more-drop{
+        display: block;
+    }
+    .phonecall{
+        width: 100%;
+        height: 500px;
+        margin-bottom: 1px solid grey;
+
+    }
+</style>
+
+<body class="bg-light">
+    <main class="w-100 mx-auto">
+        <div class="border rounded shadow mx-auto mt-3  w-25  phone" id="phone">
+            <div class="d-flex">
+                <div class="camera ">
+                    <div class="inner"></div>
+                </div>
+                <p id="datescreen"></p>
+            </div>
+            <div id="home" class="d-flex justify-content-between mx-4 ">
+                <button onclick="phone()" class="btn btn-success cam"><i
+                        class="fa-solid fa-phone fs-5 py-1"></i></button>
+                <button onclick="home()" class="btn btn-dark dark py-2"><i class="fa-solid fa-house"></i></button>
+                <div class="mt-5 mx-2 big-div">
+                    <div class="app-div">
+                        <button class="btn btn-dark apps  py-2 m-2"><i class="fa-sharp fa-solid fa-bolt"></i></button>
+                        <small class="text-white mx-3">bolt</small>
+                    </div>
+                    <div class="app-div mx-3">
+                        <button class="btn btn-dark apps  py-2 m-2"><span class="material-symbols-outlined">
+                                stadia_controller
+                            </span> </i></button>
+                        <small class="text-white mx-2">games</small>
+                    </div>
+                    <div class="app-div">
+                        <button class="btn btn-dark apps  py-2 m-2"><i class="fa-solid fa-image"></i></button>
+                        <small class="text-white mx-3">gallery</small>
+                    </div>
+                    <div class="app-div ">
+                        <button class="btn btn-dark apps  py-2 m-2"><i class="fa-brands fa-instagram"></i></button>
+                        <small class="text-white ">instagram</small>
+                    </div>
+                    <div class="app-div mx-3">
+                        <button class="btn btn-dark apps  py-2 m-2"><i class="fa-brands fa-tiktok"></i></button>
+                        <small class="text-white mx-3">Tiktok</small>
+                    </div>
+                    <div class="app-div">
+                        <button class="btn btn-dark apps  py-2 m-2"><i class="fa-brands fa-twitter"></i></button>
+                        <small class="text-white mx-3">Twitter</small>
+                    </div>
+                    <div class="app-div">
+                        <button class="btn btn-dark apps  py-2 m-2"><i class="fa-brands fa-linkedin"></i></button>
+                        <small class="text-white mx-2">linkedin</small>
+                    </div>
+                    <div class="app-div mx-3">
+                        <button class="btn btn-dark apps  py-2 m-2"><i class="fa-solid fa-music"></i></button>
+                        <small class="text-white mx-3">Music</small>
+                    </div>
+                    <div class="app-div">
+                        <button class="btn btn-dark apps  py-2 m-2"><i class="fa-solid fa-envelope"></i></button>
+                        <small class="text-white mx-2">Message</small>
+                    </div>
+                </div>
+                <button class="btn btn-dark camer"> <span class="material-symbols-outlined">
+                        photo_camera
+                    </span> </button>
+            </div>
+            <div id="screen2"></div>
+            <p id="screen3"></p>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/7fe2d1a9ce.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
