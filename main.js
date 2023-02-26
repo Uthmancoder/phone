@@ -3,6 +3,8 @@ let nav = document.getElementById("datescreen")
 let homepage = document.getElementById("home")
 let screen = document.getElementById("screen2")
 let thiredScreen = document.getElementById("screen3")
+let dialnum = document.getElementById("dial")
+let digi = document.querySelectorAll(".lig")
 setInterval(() => {
     let date = new Date();
     let hour = date.getHours();
@@ -204,26 +206,31 @@ dialpad
 </span> </button>
 
 <div class = "logs-drop"> 
-    <p id = "dial"> </p>
+    <div class ="d-flex allign-items-center mx-5 position-relative">
+    <p id = "dial" class ="text-center text-light fs-5 mx-5 dialscreen ">  </p>
+    <button onclick = "del(${index})" class = "btn btn text-primary fs-5 abs"> <span class="material-symbols-outlined">
+    backspace
+    </span> </button>
+    </div>
     <div class = "bttn-mag text-light">
-    <button class ="btn btn-light  text-light lig"> 1</button>
-    <button class ="btn btn-light lig"> 2</button>
-    <button class ="btn btn-light lig"> 3</button>
-    <button class ="btn btn-light lig"> 4</button>
-    <button class ="btn btn-light lig"> 5</button>
-    <button class ="btn btn-light lig"> 6</button>
-    <button class ="btn btn-light lig"> 7</button>
-    <button class ="btn btn-light lig"> 8</button>
-    <button class ="btn btn-light lig"> 9</button>
-    <button class ="btn btn-light lig"> 0</button>
+    <button class ="btn btn  text-light lig" value = "1" onclick="but()" > 1</button>
+    <button class ="btn btn  text-light lig" value = "2" onclick="but()" > 2</button>
+    <button class ="btn btn  text-light lig" value = "3" onclick="but()" > 3</button>
+    <button class ="btn btn  text-light lig" value = "4" onclick="but()" > 4</button>
+    <button class ="btn btn  text-light lig" value = "5" onclick="but()" > 5</button>
+    <button class ="btn btn  text-light lig" value = "6" onclick="but()" > 6</button>
+    <button class ="btn btn  text-light lig" value = "7" onclick="but()" > 7</button>
+    <button class ="btn btn  text-light lig" value = "8" onclick="but()" > 8</button>
+    <button class ="btn btn   text-light lig" value = "9" onclick="but()"> 9</button>
+    <button class ="btn btn  text-light lig" value = "0" onclick="but()"> 0</button>
     </div>
 
     <div class = "d-flex mx-5" > 
-     <button class = "btn btn-success recc rounded-circle mx-4" ><i
+     <button onclick = "sim1()" class = "btn btn-success recc rounded-circle mx-4" ><i
      class="fa-solid fa-phone fs-5 py-1"></i>1 </button>
-     <button class = "btn btn-success recc rounded-circle mx-2" > <i
+     <button onclick = "sim2()" class = "btn btn-success recc rounded-circle mx-2" > <i
      class="fa-solid fa-phone fs-5 py-1"></i>2 </button>
-     <button class= "btn btn text-primary fs-1"><span class="material-symbols-outlined">
+     <button onclick = "undial()" class= "btn btn text-primary fs-1"><span class="material-symbols-outlined">
      apps
      </span> </button>
     </div>
@@ -354,6 +361,28 @@ dialpad
   </span> <small class = "text-light">Favorite </small> </button>
 </div>
     </div>`
+}
+let anArray = []
+let index = 0
+
+document.getElementById("dial").innerHTML = dial;
+function but() {
+    let btnVal = event.target.value;
+    anArray.push(btnVal);
+    dial.innerHTML = anArray.join(''); // Clear previous contents and display updated array
+  }
+function del(index) {
+    anArray.pop();
+    document.getElementById("dial").innerHTML = anArray.join('');
+  }
+function undial() {
+    document.querySelector(".divv").style = "display : none"
+}
+function sim1() {
+   homepage.innerHTML = ""
+   screen3.innerHTML = ""
+   
+
 }
 
 function contacts() {
@@ -762,4 +791,7 @@ function home() {
 function back() {
     screen.innerHTML = ""
     defaultScreen()
+    setInterval(() => {
+        window.location.reload();
+    }, 50);
 }
