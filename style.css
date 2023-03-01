@@ -1,0 +1,536 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .phone {
+        position: relative;
+    
+        height: 550px;
+        background-image: url(https://wallpaper.dog/large/742006.jpg); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 6px inset rgba(0, 0, 0, 0.9);
+        width: 340px;
+    }
+
+    .camera {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: black;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    .inner {
+        background-color: grey;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    .cam {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .camer {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .dark {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 10px;
+        left: 44%;
+    }
+
+    .apps {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .app-div {
+        display: grid;
+        width: fit-content;
+
+    }
+
+    .big-div {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+
+    .bigdi {
+        width: 250px;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .big-div button {
+        width: 50px;
+        height: 45px;
+    }
+
+    .icons {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+    .marg {
+        position: absolute;
+        right: 1%;
+    }
+
+    .menu {
+        width: 100%;
+        height: 450px;
+        overflow-y: scroll;
+        margin-left: 10px;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+    .back-div{
+        background-color: rgba(225, 225, 225, 0.5);
+        height: 40px;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .back {
+        border: none;
+        background: none;
+        color: black;
+        z-index: 1;
+        /* margin: -15px 0 15px 0; */
+    }
+    .mid{
+        margin: 0 16%;
+    }
+
+    .inp-div {
+        height: 25px;
+        position: relative;
+        padding: 2px 10px;
+        background-color: rgba(225, 225, 225, 0.5);
+        /* margin-left: 7%; */
+        border: none;
+
+    }
+
+    input {
+        position: absolute;
+        height: 20px;
+        top: 2px;
+        border: none;
+        background: none;
+        outline: none;
+    }
+
+
+    .search {
+        font-size: 20px;
+    }
+
+    .mic {
+        font-size: 20px;
+        position: absolute;
+        right: 10px;
+    }
+    
+
+    .more {
+        width: 30px;
+        height: 30px;
+        padding: 4px 2px;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        /* margin-left: 20px; */
+        background: none;
+    }
+    .logs{
+        width: 100%;
+        height: 390px;
+        overflow-y: scroll;
+    }
+    .mint{
+        font-size: 13px;
+    }
+    .logs::-webkit-scrollbar{
+        display: none;
+    }
+
+    .vert{
+        font-size: 20px;
+    }
+
+    .more:hover {
+        background-color: rgba(225, 225, 225, 0.5);
+    }
+
+    .more-div {
+        position: relative;
+    }
+.bigA{
+    margin:0 20px;
+}
+.gallery{
+    width: 90px;
+    height: 85px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px  grey;
+    position: relative;
+}
+.bck{
+    margin-right: -30px;
+}
+.galfoot{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(225, 225, 225, 0.3);
+}
+    .more-drop {
+        width: 170px;
+        height: 130px;
+        border-radius: 10px;
+        background-color: rgb(85, 85, 85);
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        color: white;
+    }
+
+    .more-div:focus-within .more-drop {
+        display: block;
+    }
+
+    .phonecall {
+        width: 100%;
+        height: 30px;
+        padding: 7px 0 35px 0;
+        border-top: 1px solid rgb(85, 85, 85);
+        border-bottom: 1px solid rgb(85, 85, 85);
+
+    }
+    .person{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: auto;
+    }
+    .abbs{
+        position: absolute;
+        left: 20px;
+    }
+    .dd{
+        width: 45px;
+        height: 45px;
+    }
+    .disp{
+        display: grid;
+    }
+    .fsize{
+        font-size: 80px;
+    }
+    .grid{
+        display: grid;
+    }
+    .hang{
+        width: 50px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .but {
+        width: 40px;
+        height: 40px;
+        padding: 0 3px;
+    }
+    .prim{
+        width: 35px;
+        height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 10px;
+
+    }
+
+    .smm, .con {
+        font-size: 16px;
+    }
+
+    .calllogs{
+        border-bottom: 1px solid rgb(85, 85, 85);
+    }
+    .tim{
+        margin-left: 74px;
+    }
+    .widt{
+        width: 80%;
+    }
+    .fsss{
+        font-size: 16px;
+        margin-top: 3px;
+    }
+    .current{
+        font-size: 16px;
+        margin-top: 3px;
+    }
+    .inf{
+      font-size: 12px; 
+    }
+    .position{
+        position: absolute;
+        left: 48%;
+        bottom: 18%;
+        width: 40px;
+        height: 40px;
+        padding: 2px 2px;
+    }
+    .divv{
+        position: relative;
+    }
+    .recent{
+       background-color: rgb(24, 22, 22);
+        position: absolute;
+        bottom: 0;
+        width: 334px;
+        display: flex;
+        padding: 7px 10px 20px 10px;
+        border-radius: 0 0 10px 10px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .firs{
+        position: absolute;
+        bottom: 6px;
+        left: 10px;
+    }
+    .sma{
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+    }
+    .logs-drop{
+        width: 319px;
+        height: 260px;
+        background-color: rgb(49, 49, 49);
+        z-index: 999;
+        position: fixed;
+        border-radius: 0 0 10px 10px;
+        bottom: 35px;
+        display: none;
+    }
+    .non{
+        border: none;
+        background: none;
+    }
+    .abs{
+        position: absolute;
+        right: -15%;
+    }
+    #screen{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .divv:focus-within .logs-drop{
+        display: block;
+    }
+    .bttn-mag{
+       display: flex;
+       flex-wrap: wrap;
+       width: 200px;
+       margin: 0 20%;
+    }
+  
+    .symb{
+        padding: 0 10px 10px 0;
+    }
+    .plux{
+        width: 45px;
+        height: 45px;
+        padding:0 10px 5px 10px;
+        font-size: 25px;
+    }
+    .small{
+        font-size: 11px;
+    }
+    .numb{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 350px;
+    }
+    .rec{
+        width: 30px;
+        height: 30px;
+        padding: 0 1px 15px 0;
+        border: none;
+        background: none;
+    }
+    .button{
+        border: none;
+        background: none;
+        outline: none;
+        color: white;
+    }
+    .differ{
+        width: 100%;
+        height: 35px;
+        background-color: rgb(35, 38, 48);
+        padding-bottom: 20px;
+        box-shadow: 0 10px 10px rgb(28, 28, 28);
+        margin:10px 0  10px -15px;
+    }
+    .recc{
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+        position: absolute;
+        left: 44%;
+        bottom: 30%;
+    }
+    .lig{
+        width: 50px;
+        height: 50px;
+        padding: 10px 10px;
+        border: none;
+        background: none;
+    }
+    .big-di{
+        width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .big-di button{
+        width: 50px;
+        height: 50px;
+
+    }
+    .simm{
+        width: 12px;
+        height: 17px;
+        margin: -5px -4px 0 10px;
+    }
+    .sim{
+        width: 12px;
+        height: 17px;  
+    }
+    .absol{
+        position: absolute;
+        left: 37%;
+    }
+    .borda{
+        border: none;
+        background: none;
+    }
+    .dialscreen{
+        width: fit-content;
+        height: 20px;
+    }
+
+    .dialdiv{
+        width: 290px;
+        height: 180px;
+        border-radius: 5px;
+        background-color: rgb(59, 58, 58);
+        z-index: 1;
+        position: absolute;
+        top: 40%;
+        margin: 0 5%;
+
+      }
+      
+
+
+    .onecontact{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: white;
+
+        }
+        .galleryscreeen{
+            width: 320px;
+            height: 380px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .galleryscreeen ::-webkit-scrollbar{
+            display: none;
+        }
+        .onecontact div{
+            width: 70%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+        }
+        .onecontact div p{
+        width: 100%;
+          
+           margin: 0px;
+
+        }
+        .onecontact img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+
+        }
+        .can{
+          border: none;
+          background: none;
+          outline: none;
+          float: right;
+          margin:30px 20px;
+        }
+        .nig{
+            margin-top: -20px;
+            margin-left: 13px;
+        }
+        .myy{
+            margin-top: 90px;
+        }
+        .pnonnum, .tom{
+            margin-top: -15px;
+        }
+        .phenum{
+            margin-top: -16px;
+        }
+        .top{
+            margin-left: -13px;
+        }
+        .exact{
+          margin: 30% 0;
+          width: 250px;
+          height: 290px;
+        }
+        .singleimg{
+            width: 320px;
+            height: 445px;
+            display: flex;
+            align-items: center;
+            margin: 0 0 0 17px;
+        }
+        .next{
+            height: 60px;
+        }
