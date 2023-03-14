@@ -18,13 +18,13 @@
     <main class="w-100 mx-auto">
         <div class=" rounded  mx-auto mt-2  phone" id="phone">
             <div class="d-flex">
-                <div class="camera ">
+                <div  class="camera ">
                     <div class="inner"></div>
                 </div>
-                <p id="datescreen"></p>
-            
+                <div id="datescreen"></div>
             </div>
             <audio id="audio" src="./call beep.wav" loop preload="auto" ></audio>
+            
             <div id="home" class="d-flex justify-content-between mx-4 ">
                 <button onclick="phone()" class="btn btn-success cam"><i
                         class="fa-solid fa-phone fs-5 py-1"></i></button>
@@ -40,6 +40,7 @@
                             </span> </i></button>
                         <small class="text-white mx-3">games</small>
                     </div>
+                    
                     <div class="app-div">
                         <button onclick="gallery()" class="btn btn-dark apps  py-2 m-2"><i class="fa-solid fa-image"></i></button>
                         <small class="text-white mx-3">gallery</small>
@@ -69,17 +70,19 @@
                         <small class="text-white mx-2">Message</small>
                     </div>
                 </div>
-                <button class="btn btn-dark camer"> <span class="material-symbols-outlined">
+                <button onclick="camera()" class="btn btn-dark camer"> <span class="material-symbols-outlined">
                         photo_camera
                     </span> </button>
             </div>
-            <div id="screen2">
+            <div id="screen2"> </div>
                 <p id="screen3"></p>
-            </div>
+           
 
         </div>
+        <audio src=""></audio>
     </main>
     <script src="https://kit.fontawesome.com/7fe2d1a9ce.js" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+
 </body>
 </html>
+<script src="main.js"></script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    video{
+        width: 400px;
+        height: 400px;
+    }
+    .camera{
+        width: 340px;
+        height: 450px;
+        margin:20px auto;
+        border-radius: 10px;
+        position: relative;
+       
+
+    }
+ #canvas{
+    width: 40px;
+    height: 40px;
+
+ }  
+ .abs{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+ } 
+ 
+</style>
+<body>
+    <div id= "camera-screen" class="camera">
+       <div id="cam_screen" >
+        <video id="video" autoplay src=""></video>
+        <canvas id = "canvas"></canvas>
+        
+       </div>
+       <div class="abs">
+        <button id="snap" onclick="snappic()">snap</button>
+       </div>
+    </div>
+      
+</body>
+</html>
+<script>
+    let canvas = document.getElementById("canvas")
+    let cam_screen = document.getElementById("cam_screen")
+    let video = document.getElementById("video")
+    let start = document.getElementById("start")
+    cam_screen.style.display = "none"
+    document.getElementById("snap").style.display = "none"
+
+//   snap.style.display = "none"
+  async  function startcam(params) {
+    document.getElementById("start").style.display = "none"
+    cam_screen.style.display = "block"
+    document.getElementById("snap").style.display = "block"
+        let stream = await navigator.mediaDevices.getUserMedia
+        ({video:true, audio:false})
+        video.srcObject = stream;
+    }
+    function snappic() {
+        canvas.getContext("2d").drawImage(video, 0,0, canvas.width, canvas.height  );
+        let img_url = canvas.toDataURL("image/png")
+        console.log(img_url);
+    }
+    
+
+</script>
