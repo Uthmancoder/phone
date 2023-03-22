@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,68 +8,90 @@
     <title>Document</title>
 </head>
 <style>
-    
-    video{
+    video {
         width: 400px;
         height: 400px;
     }
-    .camera{
+
+    .camera {
         width: 340px;
         height: 450px;
-        margin:20px auto;
+        margin: 20px auto;
         border-radius: 10px;
         position: relative;
-       
+
 
     }
- #canvas{
-    width: 40px;
-    height: 40px;
 
- }  
- .abs{
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
- } 
- 
+    #canvas {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .abs {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+    }
 </style>
+
 <body>
-    <div id= "camera-screen" class="camera">
-       <div id="cam_screen" >
-        <video id="video" autoplay src=""></video>
-        <canvas id = "canvas"></canvas>
-        
-       </div>
-       <div class="abs">
-        <button id="snap" onclick="snappic()">snap</button>
-       </div>
+    <!-- HTML code -->
+    <div id="camera-wrapper">
+        <div id="camera-preview">
+            <video id="camera-stream" width="350" height="350"></video>
+        </div>
+        <div id="camera-controls">
+            <button id="camera-activate">Activate Camera</button>
+            <button id="camera-snapshot">Take Snapshot</button>
+        </div>
     </div>
-      
+
 </body>
+
 </html>
 <script>
-    let canvas = document.getElementById("canvas")
-    let cam_screen = document.getElementById("cam_screen")
-    let video = document.getElementById("video")
-    let start = document.getElementById("start")
-    cam_screen.style.display = "none"
-    document.getElementById("snap").style.display = "none"
+    const cameraPreview = document.getElementById('camera-preview');
+    const cameraStream = document.getElementById('camera-stream');
+    const cameraActivateButton = document.getElementById('camera-activate');
+    const cameraSnapshotButton = document.getElementById('camera-snapshot');
 
-//   snap.style.display = "none"
-  async  function startcam(params) {
-    document.getElementById("start").style.display = "none"
-    cam_screen.style.display = "block"
-    document.getElementById("snap").style.display = "block"
-        let stream = await navigator.mediaDevices.getUserMedia
-        ({video:true, audio:false})
-        video.srcObject = stream;
-    }
-    function snappic() {
-        canvas.getContext("2d").drawImage(video, 0,0, canvas.width, canvas.height  );
-        let img_url = canvas.toDataURL("image/png")
-        console.log(img_url);
-    }
-    
+
+    // //   snap.style.display = "none"
+    //   async  function startcam(params) {
+    //         let stream = await navigator.mediaDevices.getUserMedia
+    //         ({video:true, audio:false})
+    //         video.srcObject = stream;
+    //     }
+    //     function snappic() {
+    //         canvas.getContext("2d").drawImage(video, 0,0, canvas.width, canvas.height  );
+    //         let img_url = canvas.toDataURL("image/png")
+    //         console.log(img_url);
+    //     }
+
+    let mediaStream = null;
+
+    // Activate the camera stream when the "Activate Camera" button is clicked
+    cameraActivateButton.addEventListener('click', async () => {
+        try {
+            mediaStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+            cameraStream.srcObject = mediaStream;
+            cameraPreview.classList.add('active');
+        } catch (error) {
+            console.error(error);
+        }
+    });
+
+    // Take a snapshot of the current video frame when the "Take Snapshot" button is clicked
+    cameraSnapshotButton.addEventListener('click', () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = cameraStream.videoWidth;
+        canvas.height = cameraStream.videoHeight;
+        canvas.getContext('2d').drawImage(cameraStream, 0, 0);
+        const imageUrl = canvas.toDataURL('image/png');
+        console.log(imageUrl);
+    });
+
 
 </script>

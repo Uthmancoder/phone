@@ -30,22 +30,22 @@ battery_horiz_050
 
 let recentArray = [
     {
-        Image: `./whatsapp.jpg`,
+        Image: "./images/let'schat.jpg",
         name: "Abdullah Sqi",
         phonenumber: "08012345678"
     },
     {
-        Image: `./telegram.jpg`,
+        Image: "./images/linkedin.jpg",
         name: "Pablo Gci",
         phonenumber: "08112345678"
     },
     {
-        Image: `./whatsapp.jpg`,
+        Image: "./images/telegram.jpg",
         name: "Dev d❤",
         phonenumber: "09012345678"
     },
     {
-        Image: `./telegram.jpg`,
+        Image: "./images/whatsapp.jpg",
         name: "Pablo Gci",
         phonenumber: "08018945678"
     },
@@ -212,7 +212,6 @@ function mtn() {
             let myTimer = setTimeout(() => {
                 document.getElementById("audio").play();
             }, 1000);
-        
             audioinit = setTimeout(() => {
                 alert("user is not responding")
                 hangup()
@@ -1177,7 +1176,7 @@ function equas() {
 function clearscr() {
     document.getElementById("caculatorScreen").innerHTML = ""
 }
-let galleryArray = [`<img  src="calender.jpg" alt="">`, `<img src="call.jpg" alt="">`, `<img src="instagram.jpg" alt="">`, `<img src="let'schat.jpg" alt="">`, `<img src="music.jpg" alt="">`, `<img src="phonebook.jpg" alt="">`, `<img src="photos.jpg" alt="">`, `<img src="whatsapp.jpg" alt="">`, `<img src="telegram.jpg" alt="">`, `<img src="music.jpg" alt="">`, `<img src="linkedin.jpg" alt="">`, `<img src="tiktok.jpg" alt="">`]
+let galleryArray = [`<img  src="./images/whatsapp.jpg" alt="">`, `<img src="./images/instagram.jpg" alt="">`, `<img src="./images/linkedin.jpg" alt="">`, `<img src="./images/whatsapp.jpg" alt="">`, `<img src="./images/music.jpg" alt="">`, `<img src="./images/phonebook.jpg" alt="">`, `<img src="./images/photos.jpg" alt="">`, `<img src="./images/whatsapp.jpg" alt="">`, `<img src="./images/telegram.jpg" alt="">`, `<img src="./images/music.jpg" alt="">`, `<img src="./images/linkedin.jpg" alt="">`, `<img src="./images/tiktok.jpg" alt="">`]
 function allImages() {
     homepage.innerHTML = ""
     screen.innerHTML = ""
@@ -1213,7 +1212,7 @@ function allImages() {
 
 let messageArray = [
     {
-        image: `./whatsapp.jpg`,
+        image: "./images/whatsapp.jpg",
         name: "Ultimate",
         pohonenum: 08132577114,
         message: [
@@ -1230,7 +1229,7 @@ let messageArray = [
 
     },
     {
-        image: `./telegram.jpg`,
+        image:"./images/telegram.jpg",
         name: "Mahmood",
         pohonenum: 09152577114,
         message: [
@@ -1247,7 +1246,7 @@ let messageArray = [
 
     },
     {
-        image: `./whatsapp.jpg`,
+        image: "./images/linkedin.jpg",
         name: "Dev-D",
         pohonenum: 07152577114,
         message: [
@@ -1264,7 +1263,7 @@ let messageArray = [
 
     },
     {
-        image: `./telegram.jpg`,
+        image: "./images/whatsapp.jpg",
         name: "Abdullahi",
         pohonenum: 08032597114,
         message: [
@@ -1282,7 +1281,7 @@ let messageArray = [
 
     },
     {
-        image: `./instagram.jpg`,
+        image: "./images/instagram.jpg",
         name: "Mayor",
         pohonenum: 071577114,
         message: [
@@ -1456,31 +1455,31 @@ function bktogal() {
 
 let musicArray = [
     {
-        image: `trendybeat.png`,
+        image: "./images/trendybeat.png",
         artist: "T-dollar",
         name: "Ti-Blaze-Rise",
-        song: `./Ruger-Bounce.mp3`
+        song: "./audio/Burna_Boy_Anybody_9jaflaver.com_.mp3"
 
     },
     {
-        image: `trendybeat.png`,
-        artist: "Sheyi-vibes",
-        name: "T-Dollar-Rise",
-        song: `./audio/Burna_Boy_Anybody_9jaflaver.com_.mp3`,
+        image: "./images/trendybeat.png",
+        artist: "Ruger",
+        name: "Ruger Bounce",
+        song: "./audio/Seyi-Vibez-On your Own (O.Y.O)    .mp3",
 
     },
     {
-        image: `trendybeat.png`,
+        image: "./images/trendybeat.png",
         artist: "Sheyi-vibes",
         name: "Seyi-Vibez-On your Own (O.Y.O)",
-        song: `./Seyi-Vibez-On your Own (O.Y.O).mp3`,
+        song: "./audio/Seyi-Vibez-On your Own (O.Y.O)    .mp3",
 
     },
     {
-        image: `trendybeat.png`,
+        image: "./images/trendybeat.png",
         artist: "Sheyi-vibes",
         name: "Seyi_Vibez_-_God_sent",
-        song: `./Seyi_Vibez_-_God_sent.mp3`,
+        song: "./audio/Seyi-Vibez-On your Own (O.Y.O)    .mp3",
 
     },
 ]
